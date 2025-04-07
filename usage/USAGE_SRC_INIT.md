@@ -1,4 +1,4 @@
-# Usage - [src/init.luau](../../src/init.luau)
+# Usage - [src/init.luau](https://github.com/rocult/script-template/blob/main/src/init.luau)
 
 This is the main entrypoint of your code and where the code starts to run.
 - Make sure to require all of your dependencies in.

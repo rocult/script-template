@@ -1,6 +1,6 @@
 # Usage
 
-All of your code should go inside the [src](../../src/) folder. If you look inside, there are a few folders there for you already. Next, I will explain the purpose of each one. Note that you don't have to stick to this structure, you can deviate away, if you're comfortable with that.
+All of your code should go inside the [src](https://github.com/rocult/script-template/tree/main/src) folder. If you look inside, there are a few folders there for you already. Next, I will explain the purpose of each one. Note that you don't have to stick to this structure, you can deviate away, if you're comfortable with that.
 
 - [src/init.luau](./USAGE_SRC_INIT.md)
 - [src/core](./USAGE_SRC_CORE.md)
@@ -11,4 +11,4 @@ Remember that all files must return something. If your file does not return anyt
 
 ## Building
 
-Once you're ready to build, test and release your script, you can run `./build.bat` or the command manually inside of [build.bat](../../build.bat)
+Once you're ready to build, test and release your script, you can run `./build.bat` or the command manually inside of [build.bat](https://github.com/rocult/script-template/blob/main/build.bat)

@@ -8,4 +8,4 @@ The only command you need to know is: `selene src`. This will run selene on all 
 
 ## Configuration
 
-You do not need to do any extra configuration. However, you can view their lint documentation [here](https://kampfkarren.github.io/selene/lints/index.html). You can add additional lints under the `[lints]` section in the [selene.toml](../../selene.toml) file.
+You do not need to do any extra configuration. However, you can view their lint documentation [here](https://kampfkarren.github.io/selene/lints/index.html). You can add additional lints under the `[lints]` section in the [selene.toml](https://github.com/rocult/script-template/blob/main/selene.toml) file.

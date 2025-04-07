@@ -8,7 +8,7 @@ Please follow the official installation guide [here](https://docs.pesde.dev/inst
 
 ## Configuration
 
-All of the configuration is done inside the [pesde.toml](../../pesde.toml) file. You can view the official documentation [here](https://docs.pesde.dev/reference/manifest/). However, I'll walk through some of the important parts here, you can view the rest on the official documentation.
+All of the configuration is done inside the [pesde.toml](https://github.com/rocult/script-template/blob/main/pesde.toml) file. You can view the official documentation [here](https://docs.pesde.dev/reference/manifest/). However, I'll walk through some of the important parts here, you can view the rest on the official documentation.
 
 ### Name
 

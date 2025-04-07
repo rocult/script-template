@@ -1,5 +1,5 @@
-# Usage - [src/types](../../src/types/)
+# Usage - [src/types](https://github.com/rocult/script-template/tree/main/src/types)
 
 In this folder, you should put any and all types that may take up a significant part of a regular `.luau` file.
 
-If you need any globals, you can also put the path to the types file into [here](../../.vscode/settings.json). You should put your global type file in [the global_types folder here](../../global_types/).
+If you need any globals, you can also put the path to the types file into [here](https://github.com/rocult/script-template/blob/main/.vscode/settings.json). You should put your global type file in [the global_types folder here](https://github.com/rocult/script-template/tree/main/global_types).

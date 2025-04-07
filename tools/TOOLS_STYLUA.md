@@ -8,4 +8,4 @@ The only command you need to know is: `stylua src`. This will format all the fil
 
 ## Configuration
 
-You can edit the formatting settings [here](../../.stylua.toml), and if you want to ignore certain files from formatting, you can enter the paths [here](../../.styluaignore).
+You can edit the formatting settings [here](https://github.com/rocult/script-template/blob/main/.stylua.toml), and if you want to ignore certain files from formatting, you can enter the paths [here](https://github.com/rocult/script-template/blob/main/.styluaignore).
