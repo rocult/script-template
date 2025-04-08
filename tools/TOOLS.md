@@ -6,3 +6,6 @@ There are many tools included in this example. They're all to help you build, fo
 - [darklua](./TOOLS_DARKLUA.md)
 - [selene](./TOOLS_SELENE.md)
 - [stylua](./TOOLS_STYLUA.md)
+
+> [!NOTE]
+> Each page talks about editing the specific file, e.g. `selene.toml`, but you can also edit it within `pesde.toml` and then run `pesde run config` to build the actual file.

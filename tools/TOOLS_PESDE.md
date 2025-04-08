@@ -32,7 +32,7 @@ Make sure to replace `PACKAGE` with the full name. For example, `evaera/promise`
 pesde add wally#evaera/promise
 ```
 
-After installing all of your dependencies, make sure to run `pesde install`!
+After installing all of your dependencies, make sure to run `pesde install` and `pesde run sourcemap_generator` to get types working!
 
 ## Updating Dependencies
 

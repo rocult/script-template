@@ -5,6 +5,7 @@ Installation is super easy!
 1. First we need to install [pesde](https://docs.pesde.dev/installation/)
    > Pesde is the toolchain and package manager which installs everything else that we may need for us. You can view their instructions on how to install it [here](https://docs.pesde.dev/installation/).
 2. Run `pesde install` to install all of the dependencies
+3. Run `pesde run config` to build all of the configuration files
 
 > [!WARNING]
 > DO NOT use any other toolchain managers like rokit or aftman to install pesde. For reaosns why, please read their documentation.
