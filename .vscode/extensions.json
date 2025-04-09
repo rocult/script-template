@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "johnnymorganz.luau-lsp",
+        "usernamehw.errorlens",
+        "johnnymorganz.stylua",
+        "kampfkarren.selene-vscode",
+        "tamasfe.even-better-toml",
+        "redhat.vscode-yaml"
+    ]
+}

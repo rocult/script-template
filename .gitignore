@@ -1,0 +1,15 @@
+/global_types/roblox.d.luau
+/luau_packages
+/lune_packages
+/roblox_packages
+/Packages
+dist.luau
+.pesde
+sourcemap.json
+
+.luaurc
+.darklua.json
+selene.toml
+default.project.json
+.stylua.toml
+.styluaignore

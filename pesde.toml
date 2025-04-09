@@ -1,0 +1,133 @@
+name = "stefanuk12/example_project"
+description = "An opinionated project layout for Roblox exploit scripts."
+version = "0.1.0"
+authors = ["Stefanuk12"]
+license = "MIT"
+includes = [
+  "pesde.toml",
+  "README.md",
+  "LICENSE",
+  "src/*",
+  "global_types/*"
+]
+
+[target]
+environment = "roblox"
+bin = "src/main.luau" # Remove this, if this is not a binary
+lib = "src/init.luau" # Remove this, if this is not a library
+build_files = ["src", "global_types"]
+
+[scripts]
+roblox_sync_config_generator = ".pesde/scripts/roblox_sync_config_generator.luau"
+sourcemap_generator = ".pesde/scripts/sourcemap_generator.luau"
+config = ".pesde/pesde_config/pesde_config.luau"
+
+[indices]
+default = "https://github.com/pesde-pkg/index"
+
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[dev_dependencies]
+darklua = { repo = "Stefanuk12/darklua", rev = "90d682b16d3e130d93b405b05f0515b32dae1659", target = "lune" }
+stylua = { name = "pesde/stylua", version = "^2.0.2", target = "lune" }
+luau_lsp = { name = "pesde/luau_lsp", version = "^1.42.1", target = "lune" }
+selene = { name = "pesde/selene", version = "^0.28.0", target = "lune" }
+scripts = { name = "pesde/scripts_rojo", version = "^0.1.0", target = "lune" }
+pesde_config = { repo = "Stefanuk12/pesde_config", rev = "5dbebb50553d952e68d88fcd53b216f2ff76e466", target = "lune" }
+rojo = { name = "pesde/rojo", version = "^7.4.4", target = "lune" }
+
+[dependencies]
+promise = { wally = "wally#evaera/promise", version = "^4.0.0" }
+
+# -- Configuration for tooling -- #
+# This is optional, you can instead use the actual config files, #
+# but it might be cleaner to just have it all in one file here.  #
+# You can use the script to build the config files initially,    #
+# then remove below.                                             #
+
+[configuration.luaurc]
+pesde_config_file = ".luaurc"
+languageMode = "strict"
+lintErrors = true
+typeErrors = true
+# globals = [ ]
+# lint = { }
+
+  [configuration.luaurc.aliases]
+  core = "./src/core"
+  modules = "./src/modules"
+  types = "./src/types"
+  shared = "./src/shared"
+  pkgs = "./roblox_packages"
+  lune = "~/.lune/.typedefs/0.8.9/"
+
+[configuration.darklua]
+pesde_config_file = ".darklua.json"
+generator = "readable"
+rules = [
+  "compute_expression",
+  "convert_local_function_to_assign",
+  "remove_comments",
+  "remove_empty_do",
+  "remove_types",
+  "remove_unused_if_branch",
+  "remove_unused_variable",
+  "remove_interpolated_string",
+  "remove_compound_assignment",
+  "remove_if_expression",
+  { rule = "inject_global_value", identifier = "DEBUG", value = false },
+]
+
+  [configuration.darklua.bundle]
+  modules_identifier = "__DARKLUA_BUNDLE_MODULES"
+  excludes = [ ]
+  require_mode = "hybrid"
+
+[configuration.selene]
+pesde_config_file = "selene.toml"
+std = "roblox"
+exclude = [
+  "global_types/*",
+  "luau_packages/*",
+  "lune_packges/*",
+  "roblox_packages/*"
+]
+
+  [configuration.selene.lints]
+  incorrect_standard_library_use = "allow"
+
+[configuration.rojo]
+pesde_config_file = "default.project.json"
+name = "your-project-name"
+
+  [configuration.rojo.tree]
+  "$className" = "Folder"
+
+  [configuration.rojo.tree.src]
+  "$path" = "src"
+
+  [configuration.rojo.tree.roblox_packages]
+  "$path" = "roblox_packages"
+
+[configuration.stylua]
+pesde_config_file = ".stylua.toml"
+column_width = 120
+line_endings = "Unix"
+indent_type = "Spaces"
+indent_width = 4
+quote_style = "AutoPreferDouble"
+call_parentheses = "Always"
+collapse_simple_statement = "Never"
+
+  [configuration.stylua.sort_requires]
+  enabled = false
+
+[configuration.styluaignore]
+pesde_config_file = ".styluaignore"
+data = """
+/global_types
+/luau_packages
+/lune_packages
+/roblox_packages
+"""

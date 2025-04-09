@@ -1,0 +1,23 @@
+# Please read this -> https://github.com/Stefanuk12/luarmor-deploy-action/tree/main
+
+name: Deploy Script to Luarmor
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: [self-hosted]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Deploy to Luarmor
+      uses: stefanuk12/luarmor-deploy-action@v1.0.0
+      with:
+        api-key: ${{ secrets.LUARMOR_API_KEY }}
+        script-id: "your-script-id"
+        file: "dist.luau"

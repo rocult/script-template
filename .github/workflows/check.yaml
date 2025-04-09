@@ -1,0 +1,44 @@
+name: Check
+
+on:
+  workflow_call:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  code-style:
+    name: Verify code style and quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Pesde
+        uses: lumin-org/setup-pesde@v0.4.1
+        with:
+          cache: true
+
+      - name: Install dependencies
+        run: |
+          pesde install
+          pesde run config
+
+      - name: StyLua
+        run: |
+          stylua=$(find ~/.pesde/bin/.tool_storage -type f -name 'stylua*' -printf '%T@ %p\n' | sort -nr | head -n1 | cut -d' ' -f2-)
+          "$stylua" --color always --check src
+
+      - name: Luau Analyze
+        run: |
+          curl https://raw.githubusercontent.com/JohnnyMorganz/luau-lsp/main/scripts/globalTypes.d.lua -o ./global_types/roblox.d.luau
+          luau_lsp=$(find ~/.pesde/bin/.tool_storage -type f -name 'luau-lsp*' -printf '%T@ %p\n' | sort -nr | head -n1 | cut -d' ' -f2-)
+          "$luau_lsp" analyze --settings .vscode/settings.json --definitions ./global_types/roblox.d.luau --ignore /roblox_packages/** src
+
+      - name: Selene
+        run: |
+          selene=$(find ~/.pesde/bin/.tool_storage -type f -name 'selene*' -printf '%T@ %p\n' | sort -nr | head -n1 | cut -d' ' -f2-)
+          "$selene" -q src

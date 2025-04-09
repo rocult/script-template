@@ -1,0 +1,27 @@
+{
+  "luau-lsp.completion.autocompleteEnd": true,
+  "luau-lsp.completion.imports.enabled": true,
+  "luau-lsp.completion.imports.requireStyle": "alwaysRelative",
+  "luau-lsp.completion.imports.separateGroupsWithLine": true,
+  "luau-lsp.diagnostics.strictDatamodelTypes": true,
+  "luau-lsp.diagnostics.workspace": true,
+  "luau-lsp.hover.multilineFunctionDefinitions": true,
+  "luau-lsp.hover.showTableKinds": true,
+  "luau-lsp.ignoreGlobs": [
+    "/Packages/**",
+    "/luau_packages/**",
+    "/lune_packages/**",
+    "/roblox_packages/**",
+    "/global_types/**",
+    "/dist.luau"
+  ],
+  "luau-lsp.platform.type": "roblox",
+  "luau-lsp.sourcemap.enabled": true,
+  "luau-lsp.types.definitionFiles": [
+    "global_types/synapse.d.luau",
+    "global_types/drawing.d.luau",
+    "global_types/luraph.d.luau",
+    "global_types/luarmor.d.luau"
+  ],
+  "luau-lsp.types.robloxSecurityLevel": "RobloxScriptSecurity"
+}
