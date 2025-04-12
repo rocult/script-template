@@ -85,14 +85,14 @@ resolved_ty = "standard"
 
 [graph."lukadev_0/option@1.2.0 lune".pkg_ref]
 ref_ty = "pesde"
-index_url = "https://github.com/pesde-pkg/index"
+index_url = "https://github.com/daimond113/pesde-index"
 
 [graph."lukadev_0/result@1.2.0 lune"]
 resolved_ty = "standard"
 
 [graph."lukadev_0/result@1.2.0 lune".pkg_ref]
 ref_ty = "pesde"
-index_url = "https://github.com/pesde-pkg/index"
+index_url = "https://github.com/daimond113/pesde-index"
 
 [graph."pesde/luau_lsp@1.42.1 lune"]
 direct = ["luau_lsp", { name = "pesde/luau_lsp", version = "^1.42.1", index = "default", target = "lune" }, "dev"]
@@ -207,7 +207,7 @@ resolved_ty = "standard"
 
 [graph."pesde/toolchainlib@0.1.12 lune".pkg_ref]
 ref_ty = "pesde"
-index_url = "https://github.com/pesde-pkg/index"
+index_url = "https://github.com/daimond113/pesde-index"
 
 [graph."pesde/toolchainlib@0.1.12 lune".pkg_ref.dependencies]
 dirs = [{ name = "jiwonz/dirs", version = "^0.3.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
@@ -237,13 +237,13 @@ option = [{ name = "lukadev_0/option", version = "^1.2.0", index = "https://gith
 result = [{ name = "lukadev_0/result", version = "^1.2.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 
 [graph."stefanuk12/pesde_config@0.1.0 lune"]
-direct = ["pesde_config", { repo = "https://github.com/Stefanuk12/pesde_config", rev = "5dbebb50553d952e68d88fcd53b216f2ff76e466" }, "dev"]
+direct = ["pesde_config", { repo = "https://github.com/Stefanuk12/pesde_config", rev = "84c3aab73e2d8845e5d562045769e74eac83f427" }, "dev"]
 resolved_ty = "dev"
 
 [graph."stefanuk12/pesde_config@0.1.0 lune".pkg_ref]
 ref_ty = "git"
 repo = "https://github.com/Stefanuk12/pesde_config"
-tree_id = "f3d99fd93380a6997a475f913efb91b54de638b5"
+tree_id = "b15270350fec108f40a7c63fbb749c6f651f795d"
 new_structure = true
 
 [graph."wally#evaera/promise@4.0.0 roblox"]

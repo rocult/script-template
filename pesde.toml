@@ -34,7 +34,7 @@ stylua = { name = "pesde/stylua", version = "^2.0.2", target = "lune" }
 luau_lsp = { name = "pesde/luau_lsp", version = "^1.42.1", target = "lune" }
 selene = { name = "pesde/selene", version = "^0.28.0", target = "lune" }
 scripts = { name = "pesde/scripts_rojo", version = "^0.1.0", target = "lune" }
-pesde_config = { repo = "Stefanuk12/pesde_config", rev = "5dbebb50553d952e68d88fcd53b216f2ff76e466", target = "lune" }
+pesde_config = { repo = "Stefanuk12/pesde_config", rev = "84c3aab73e2d8845e5d562045769e74eac83f427", target = "lune" }
 rojo = { name = "pesde/rojo", version = "^7.4.4", target = "lune" }
 
 [dependencies]
