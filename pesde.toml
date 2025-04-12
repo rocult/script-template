@@ -51,10 +51,11 @@ pesde_config_file = ".luaurc"
 languageMode = "strict"
 lintErrors = true
 typeErrors = true
-# globals = [ ]
-# lint = { }
+globals = [ ]
+lint = { }
 
   [configuration.luaurc.aliases]
+  src = "./src"
   core = "./src/core"
   modules = "./src/modules"
   types = "./src/types"
