@@ -1,3 +1,4 @@
+pesde run config
 pesde run sourcemap_generator > sourcemap.json
 stylua src
 selene src
