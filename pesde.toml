@@ -97,6 +97,7 @@ exclude = [
 
   [configuration.selene.lints]
   incorrect_standard_library_use = "allow"
+  undefined_variable = "allow"
 
 [configuration.rojo]
 pesde_config_file = "default.project.json"
