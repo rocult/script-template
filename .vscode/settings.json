@@ -21,7 +21,8 @@
     "global_types/synapse.d.luau",
     "global_types/drawing.d.luau",
     "global_types/luraph.d.luau",
-    "global_types/luarmor.d.luau"
+    "global_types/luarmor.d.luau",
+    "global_types/roblox.d.luau"
   ],
   "luau-lsp.types.robloxSecurityLevel": "RobloxScriptSecurity"
 }
