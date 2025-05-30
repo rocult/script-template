@@ -201,11 +201,13 @@ option = [{ name = "lukadev_0/option", version = "^1.2.0", index = "https://gith
 result = [{ name = "lukadev_0/result", version = "^1.2.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 
 [graph."stefanuk12/luau_defs@0.1.0 luau"]
-direct = ["luau_defs", { path = "../../luau-defs" }, "dev"]
+direct = ["luau_defs", { repo = "https://github.com/rocult/luau-defs", rev = "be08a6412352aa491899a335a9af9b510b38ed2e" }, "dev"]
 
 [graph."stefanuk12/luau_defs@0.1.0 luau".pkg_ref]
-ref_ty = "path"
-path = "../../luau-defs"
+ref_ty = "git"
+repo = "https://github.com/rocult/luau-defs"
+tree_id = "7fd72032828d75503f3e0ab3ddee54b3fe1882b6"
+new_structure = true
 
 [graph."stefanuk12/pesde_config@0.1.0 lune"]
 direct = ["pesde_config", { repo = "https://github.com/Stefanuk12/pesde_config", rev = "84c3aab73e2d8845e5d562045769e74eac83f427" }, "dev"]

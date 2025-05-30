@@ -39,7 +39,7 @@ selene = { name = "pesde/selene", version = "^0.28.0", target = "lune" }
 scripts = { name = "pesde/scripts_rojo", version = "^0.1.0", target = "lune" }
 pesde_config = { repo = "Stefanuk12/pesde_config", rev = "84c3aab73e2d8845e5d562045769e74eac83f427", target = "lune" }
 rojo = { name = "pesde/rojo", version = "^7.4.4", target = "lune" }
-luau_defs = { path = "../../luau-defs" }
+luau_defs = { repo = "rocult/luau-defs", rev = "be08a6412352aa491899a335a9af9b510b38ed2e" }
 
 [dependencies]
 # Example dependency below, remove it if you don't need it
