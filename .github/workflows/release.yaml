@@ -18,7 +18,7 @@ jobs:
         id: read_name
         with:
           file: 'pesde.toml'
-          field: 'package.name'
+          field: 'name'
 
       - name: Process file name
         id: process_file_name
@@ -31,7 +31,7 @@ jobs:
         id: read_version
         with:
           file: 'pesde.toml'
-          field: 'package.version'
+          field: 'version'
 
     outputs:
       name: ${{ steps.process_file_name.outputs.value }}
@@ -96,14 +96,14 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ needs.release-data.outputs.name }}.luau
-          path: dist.luau
+          path: ./
 
-      - name: Upload Binary to Release
+      - name: Upload release asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create-release.outputs.upload_url }}
-          asset_path: dist.luau
+          asset_path: ./dist.luau
           asset_name: ${{ needs.release-data.outputs.name }}.luau
           asset_content_type: text/plain
