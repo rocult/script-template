@@ -35,10 +35,10 @@ jobs:
 
       - name: Luau Analyze
         run: |
-          curl https://raw.githubusercontent.com/JohnnyMorganz/luau-lsp/main/scripts/globalTypes.d.lua -o ./global_types/roblox.d.luau
+          curl https://raw.githubusercontent.com/JohnnyMorganz/luau-lsp/main/scripts/globalTypes.d.lua -o ./roblox.d.luau
           ~/.pesde/bin/luau_lsp -v
           luau_lsp=$(find ~/.pesde/bin/.tool_storage -type f -name 'luau-lsp*' -printf '%T@ %p\n' | sort -nr | head -n1 | cut -d' ' -f2-)
-          "$luau_lsp" analyze --settings .vscode/settings.json --definitions ./global_types/roblox.d.luau --ignore /roblox_packages/** src
+          "$luau_lsp" analyze --settings .vscode/settings.json --definitions ./roblox.d.luau --ignore /roblox_packages/** src
 
       - name: Selene
         run: |
