@@ -11,6 +11,10 @@ includes = [
   "global_types/*"
 ]
 
+[engines]
+pesde = "^0.6.2"
+lune = "=0.8.9"
+
 [target]
 environment = "roblox"
 bin = "src/main.luau" # Remove this, if this is not a binary
