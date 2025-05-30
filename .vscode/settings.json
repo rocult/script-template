@@ -15,7 +15,6 @@
     "/luau_packages/**",
     "/lune_packages/**",
     "/roblox_packages/**",
-    "/global_types/**",
     "/dist.luau"
   ],
   "luau-lsp.types.definitionFiles": [

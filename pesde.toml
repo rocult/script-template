@@ -8,7 +8,6 @@ includes = [
   "README.md",
   "LICENSE",
   "src/*",
-  "global_types/*"
 ]
 
 [engines]
@@ -19,7 +18,7 @@ lune = "=0.8.9"
 environment = "roblox"
 bin = "src/main.luau" # Remove this, if this is not a binary
 lib = "src/init.luau" # Remove this, if this is not a library
-build_files = ["src", "global_types"]
+build_files = ["src"]
 
 [scripts]
 roblox_sync_config_generator = ".pesde/scripts/roblox_sync_config_generator.luau"
@@ -95,7 +94,6 @@ rules = [
 pesde_config_file = "selene.toml"
 std = "roblox"
 exclude = [
-  "global_types/*",
   "luau_packages/*",
   "lune_packges/*",
   "roblox_packages/*"
@@ -134,7 +132,6 @@ collapse_simple_statement = "Never"
 [configuration.styluaignore]
 pesde_config_file = ".styluaignore"
 data = """
-/global_types
 /luau_packages
 /lune_packages
 /roblox_packages
