@@ -30,7 +30,7 @@ default = "https://github.com/UpliftGames/wally-index"
 promise = { wally = "lukadev-0/typed-promise", version = "^4.0.0" }
 
 [dev_dependencies]
-darklua = { repo = "Stefanuk12/darklua", rev = "90d682b16d3e130d93b405b05f0515b32dae1659", target = "lune" }
+darklua = { repo = "Stefanuk12/darklua", rev = "3af4b5a642ddda5141cfb086021626c97f82047d", target = "lune" }
 stylua = { name = "pesde/stylua", version = "^2.0.2", target = "lune" }
 luau_lsp = { name = "pesde/luau_lsp", version = "^1.42.1", target = "lune" }
 selene = { name = "pesde/selene", version = "^0.28.0", target = "lune" }

@@ -181,21 +181,21 @@ pathfs = [{ name = "jiwonz/pathfs", version = "^0.3.0", index = "https://github.
 result = [{ name = "lukadev_0/result", version = "^1.2.0", index = "https://github.com/pesde-pkg/index" }, "peer"]
 unzip = [{ name = "0x5eal/unzip", version = "^0.1.0", index = "https://github.com/pesde-pkg/index", target = "luau" }, "standard"]
 
-[graph."stefanuk12/darklua@0.16.1 lune"]
-direct = ["darklua", { repo = "https://github.com/Stefanuk12/darklua", rev = "90d682b16d3e130d93b405b05f0515b32dae1659" }, "dev"]
+[graph."stefanuk12/darklua@0.16.2 lune"]
+direct = ["darklua", { repo = "https://github.com/Stefanuk12/darklua", rev = "3af4b5a642ddda5141cfb086021626c97f82047d" }, "dev"]
 
-[graph."stefanuk12/darklua@0.16.1 lune".dependencies]
+[graph."stefanuk12/darklua@0.16.2 lune".dependencies]
 core = ["pesde/toolchainlib@0.1.15 lune", "standard"]
 option = ["lukadev_0/option@1.2.0 lune", "standard"]
 result = ["lukadev_0/result@1.2.0 lune", "standard"]
 
-[graph."stefanuk12/darklua@0.16.1 lune".pkg_ref]
+[graph."stefanuk12/darklua@0.16.2 lune".pkg_ref]
 ref_ty = "git"
 repo = "https://github.com/Stefanuk12/darklua"
-tree_id = "cca566528d0ee232fca8408098b87246cb1f4738"
+tree_id = "50e4558e2337cf1973b2e06f3e8cd5818d2d0d1e"
 new_structure = true
 
-[graph."stefanuk12/darklua@0.16.1 lune".pkg_ref.dependencies]
+[graph."stefanuk12/darklua@0.16.2 lune".pkg_ref.dependencies]
 core = [{ name = "pesde/toolchainlib", version = "^0.1.12", index = "https://github.com/pesde-pkg/index" }, "standard"]
 option = [{ name = "lukadev_0/option", version = "^1.2.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 result = [{ name = "lukadev_0/result", version = "^1.2.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
