@@ -1,15 +1,6 @@
-/roblox.d.luau
-/luau_packages
-/lune_packages
-/roblox_packages
-/Packages
-dist.luau
 .pesde
-sourcemap.json
+/*_packages
+/Packages
 
-.luaurc
-.darklua.json
-selene.toml
-default.project.json
-.stylua.toml
-.styluaignore
+dist.luau
+roblox.d.luau

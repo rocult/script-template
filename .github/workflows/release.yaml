@@ -17,8 +17,8 @@ jobs:
         uses: SebRollen/toml-action@v1.0.2
         id: read_name
         with:
-          file: 'pesde.toml'
-          field: 'name'
+          file: "pesde.toml"
+          field: "name"
 
       - name: Process file name
         id: process_file_name
@@ -30,8 +30,8 @@ jobs:
         uses: SebRollen/toml-action@v1.0.2
         id: read_version
         with:
-          file: 'pesde.toml'
-          field: 'version'
+          file: "pesde.toml"
+          field: "version"
 
     outputs:
       name: ${{ steps.process_file_name.outputs.value }}
@@ -65,7 +65,7 @@ jobs:
           tag_name: ${{ needs.release-data.outputs.version }}
           name: ${{ needs.release-data.outputs.version }}
           draft: false
-  
+
   bundle:
     name: Bundle
     runs-on: ubuntu-latest
@@ -77,7 +77,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install Pesde
-        uses: lumin-org/setup-pesde@v0.3.1 
+        uses: lumin-org/setup-pesde@v0.3.1
         with:
           cache: true
 
@@ -90,7 +90,7 @@ jobs:
         run: |
           ~/.pesde/bin/darklua -V
           darklua=$(find ~/.pesde/bin/.tool_storage -type f -name 'darklua*' -printf '%T@ %p\n' | sort -nr | head -n1 | cut -d' ' -f2-)
-          "$darklua" process src/init.luau dist.luau -c .darklua.json
+          "$darklua" process src/init.luau dist.luau -c .meta/.darklua.json
 
       - name: Upload archive
         uses: actions/upload-artifact@v3

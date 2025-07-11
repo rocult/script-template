@@ -6,16 +6,50 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
-    runs-on: [self-hosted]
+  bundle:
+    name: Bundle
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-    - name: Deploy to Luarmor
-      uses: stefanuk12/luarmor-deploy-action@v1.0.0
-      with:
-        api-key: ${{ secrets.LUARMOR_API_KEY }}
-        script-id: "your-script-id"
-        file: "dist.luau"
+      - name: Install Pesde
+        uses: lumin-org/setup-pesde@v0.3.1
+        with:
+          cache: true
+
+      - name: Install dependencies
+        run: |
+          pesde install
+          pesde run config
+
+      - name: Darklua
+        run: |
+          ~/.pesde/bin/darklua -V
+          darklua=$(find ~/.pesde/bin/.tool_storage -type f -name 'darklua*' -printf '%T@ %p\n' | sort -nr | head -n1 | cut -d' ' -f2-)
+          "$darklua" process src/init.luau dist.luau -c .meta/.darklua.json
+
+      - name: Upload dist.luau artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist.luau
+
+  deploy:
+    runs-on: [self-hosted]
+    needs:
+      - bundle
+
+    steps:
+      - name: Download dist.luau artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: dist
+          path: ./
+
+      - name: Deploy to Luarmor
+        uses: stefanuk12/luarmor-deploy-action@v1.0.0
+        with:
+          api-key: ${{ secrets.LUARMOR_API_KEY }}
+          script-id: "your-script-id"
+          file: "dist.luau"

@@ -31,7 +31,7 @@ jobs:
         run: |
           ~/.pesde/bin/stylua -V
           stylua=$(find ~/.pesde/bin/.tool_storage -type f -name 'stylua*' -printf '%T@ %p\n' | sort -nr | head -n1 | cut -d' ' -f2-)
-          "$stylua" --color always --check src
+          "$stylua" -f .meta/.stylua.toml --color always --check src
 
       - name: Luau Analyze
         run: |
@@ -44,4 +44,4 @@ jobs:
         run: |
           ~/.pesde/bin/selene -V
           selene=$(find ~/.pesde/bin/.tool_storage -type f -name 'selene*' -printf '%T@ %p\n' | sort -nr | head -n1 | cut -d' ' -f2-)
-          "$selene" -q src
+          "$selene" --config .meta/selene.toml -q src

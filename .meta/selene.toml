@@ -1,0 +1,6 @@
+exclude = ["*_packages/*"]
+std = "roblox"
+
+[lints]
+incorrect_standard_library_use = "allow"
+undefined_variable = "allow"

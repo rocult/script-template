@@ -1,0 +1,14 @@
+{
+  "name": "example_project",
+  "tree": {
+    "$className": "DataModel",
+
+    "roblox_packages": {
+      "$path": "roblox_packages"
+    },
+
+    "src": {
+      "$path": "src"
+    }
+  }
+}
