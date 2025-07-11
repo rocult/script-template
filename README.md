@@ -4,10 +4,10 @@ This is an opinionated project layout, how I think you should layout your projec
 
 ## Chapters
 
-- [Installation](./docs/installation/INSTALLATION_INITIAL.md)
-- [Usage](./docs/usage/USAGE.md)
-- [Tools](./docs/tools/TOOLS.md)
-- [Workflows](./docs/workflows/WORKFLOWS.md)
+- [Installation](./installation/INSTALLATION_INITIAL.md)
+- [Usage](./usage/USAGE.md)
+- [Tools](./tools/TOOLS.md)
+- [Workflows](./workflows/WORKFLOWS.md)
 
 ## Usage
 
@@ -16,4 +16,4 @@ This is an opinionated project layout, how I think you should layout your projec
 
 1. Clone the repository
 2. Set the `name` inside of [pesde.toml](./pesde.toml) as `GITHUB_USERNAME/PROJECT_NAME`, replacing the values of course...
-3. Follow each [chapter](#chapters), starting with [Installation](./docs/installation/INSTALLATION_INITIAL.md)
+3. Follow each [chapter](#chapters), starting with [Installation](./installation/INSTALLATION_INITIAL.md)
