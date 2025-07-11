@@ -4,13 +4,14 @@
 
 ## Usage
 
-To run darklua, the one command you need to know is: `darklua process src/init.luau dist.luau -c .darklua.json`.
+To run darklua, the one command you need to know is: `darklua process src/init.luau dist.luau -c .meta/.darklua.json`.
 
 This will:
+
 - Combine all the files `src/init.luau` requires and bundle them with it
 - Output the file to `dist.luau`
 - Using the configuration defined in `.darklua.json`
 
 ## Configuration
 
-You can view their official documentation [here](https://darklua.com/docs/config/).
+You can view their [official documentation here](https://darklua.com/docs/config/).
