@@ -25,5 +25,17 @@
     "./luau_packages/.pesde/stefanuk12+luau_defs/0.1.0/luau_defs/docs/luraph.d.json"
   ],
   "selene.selenePath": "./.meta/selene.toml",
-  "stylua.configPath": "./.meta/.stylua.toml"
+  "stylua.configPath": "./.meta/.stylua.toml",
+  "workbench.editor.customLabels.patterns": {
+    "**/init.lua": "${dirname} (${filename}.${extname})",
+    "**/init.luau": "${dirname} (${filename}.${extname})"
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua",
+    "editor.formatOnSave": true
+  },
+  "[luau]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua",
+    "editor.formatOnSave": true
+  },
 }
