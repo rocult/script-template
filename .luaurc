@@ -1,12 +1,11 @@
 {
   "aliases": {
-    "core": "./src/core",
-    "lune": "~/.lune/.typedefs/0.8.9/",
-    "modules": "./src/modules",
     "pkgs": "./roblox_packages",
+    "core": "./src/core",
+    "modules": "./src/modules",
     "shared": "./src/shared",
-    "src": "./src",
-    "types": "./src/types"
+    "types": "./src/types",
+    "src": "./src"
   },
   "globals": [],
   "languageMode": "strict",
