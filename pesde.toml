@@ -10,10 +10,11 @@ includes = ["pesde.toml", "README.md", "LICENSE", "src/*"]
 lune = "=0.8.9"
 
 [target]
+build_files = ["src"]
 environment = "roblox"
+# Remove bin AND lib, if you are not publishing to the registry
 bin = "src/main.luau"  # Remove this, if this is not a binary
 lib = "src/init.luau"  # Remove this, if this is not a library
-build_files = ["src"]
 
 [scripts]
 roblox_sync_config_generator = ".pesde/scripts/roblox_sync_config_generator.luau"
