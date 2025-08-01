@@ -13,7 +13,7 @@
   "luau-lsp.sourcemap.sourcemapFile": "./.meta/sourcemap.json",
   "luau-lsp.sourcemap.generatorCommand": "pesde run sourcemap_generator > .meta/sourcemap.json",
   "luau-lsp.types.robloxSecurityLevel": "RobloxScriptSecurity",
-  "luau-lsp.ignoreGlobs": ["/Packages/**", "/*_packages/**", "/dist.luau"],
+  "luau-lsp.ignoreGlobs": ["/Packages/**", "/*_packages/**", "/dist.lua"],
   "luau-lsp.types.definitionFiles": [
     "./luau_packages/.pesde/stefanuk12+luau_defs/0.1.0/luau_defs/types/environment.d.luau",
     "./luau_packages/.pesde/stefanuk12+luau_defs/0.1.0/luau_defs/types/luarmor.d.luau",
