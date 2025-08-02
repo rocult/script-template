@@ -24,7 +24,7 @@
     "./luau_packages/.pesde/stefanuk12+luau_defs/0.1.0/luau_defs/docs/luarmor.d.json",
     "./luau_packages/.pesde/stefanuk12+luau_defs/0.1.0/luau_defs/docs/luraph.d.json"
   ],
-  "selene.selenePath": "./.meta/selene.toml",
+  "selene.configPath": "./.meta/selene.toml",
   "stylua.configPath": "./.meta/.stylua.toml",
   "workbench.editor.customLabels.patterns": {
     "**/init.lua": "${dirname} (${filename}.${extname})",
