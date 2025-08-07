@@ -11,10 +11,10 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
 
       - name: Read package name
-        uses: SebRollen/toml-action@v1.0.2
+        uses: SebRollen/toml-action@v1.2.0
         id: read_name
         with:
           file: "pesde.toml"
@@ -24,10 +24,10 @@ jobs:
         id: process_file_name
         run: |
           PROCESSED_NAME=$(echo "${{ steps.read_name.outputs.value }}" | awk -F'/' '{if (NF>=2) print $2; else print $0}')
-          echo "PROCESSED_NAME=$PROCESSED_NAME" >> $GITHUB_ENV
+          echo "value=$PROCESSED_NAME" >> $GITHUB_OUTPUT
 
       - name: Read package version
-        uses: SebRollen/toml-action@v1.0.2
+        uses: SebRollen/toml-action@v1.2.0
         id: read_version
         with:
           file: "pesde.toml"
@@ -43,7 +43,7 @@ jobs:
     needs: release-data
 
     outputs:
-      upload_url: ${{ steps.create_release.outputs.upload_url }}
+      release_id: ${{ steps.create_release.outputs.id }}
 
     steps:
       - uses: actions/checkout@v4
@@ -58,7 +58,7 @@ jobs:
 
       - name: Create release
         id: create_release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -92,18 +92,18 @@ jobs:
           darklua=$(find ~/.pesde/bin/.tool_storage -type f -name 'darklua*' -printf '%T@ %p\n' | sort -nr | head -n1 | cut -d' ' -f2-)
           "$darklua" process src/init.luau dist.lua -c .meta/.darklua.json
 
-      - name: Upload archive
-        uses: actions/upload-artifact@v3
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ needs.release-data.outputs.name }}.luau
           path: ./
 
       - name: Upload release asset
-        uses: actions/upload-release-asset@v1
+        uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ needs.create-release.outputs.upload_url }}
-          asset_path: ./dist.lua
-          asset_name: ${{ needs.release-data.outputs.name }}.luau
-          asset_content_type: text/plain
+          tag_name: ${{ needs.release-data.outputs.version }}
+          files: |
+            ./dist.lua
+          name: ${{ needs.release-data.outputs.version }}
