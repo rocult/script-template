@@ -15,14 +15,14 @@
   "luau-lsp.types.robloxSecurityLevel": "RobloxScriptSecurity",
   "luau-lsp.ignoreGlobs": ["/Packages/**", "/*_packages/**", "/dist.lua"],
   "luau-lsp.types.definitionFiles": [
-    "./luau_packages/.pesde/stefanuk12+luau_defs/0.1.0/luau_defs/types/environment.d.luau",
-    "./luau_packages/.pesde/stefanuk12+luau_defs/0.1.0/luau_defs/types/luarmor.d.luau",
-    "./luau_packages/.pesde/stefanuk12+luau_defs/0.1.0/luau_defs/types/luraph.d.luau"
+    "./luau_packages/.pesde/stefanuk12+luau_defs/0.2.0/luau_defs/types/environment.d.luau",
+    "./luau_packages/.pesde/stefanuk12+luau_defs/0.2.0/luau_defs/types/luarmor.d.luau",
+    "./luau_packages/.pesde/stefanuk12+luau_defs/0.2.0/luau_defs/types/luraph.d.luau"
   ],
   "luau-lsp.types.documentationFiles": [
-    "./luau_packages/.pesde/stefanuk12+luau_defs/0.1.0/luau_defs/docs/environment.d.json",
-    "./luau_packages/.pesde/stefanuk12+luau_defs/0.1.0/luau_defs/docs/luarmor.d.json",
-    "./luau_packages/.pesde/stefanuk12+luau_defs/0.1.0/luau_defs/docs/luraph.d.json"
+    "./luau_packages/.pesde/stefanuk12+luau_defs/0.2.0/luau_defs/docs/environment.d.json",
+    "./luau_packages/.pesde/stefanuk12+luau_defs/0.2.0/luau_defs/docs/luarmor.d.json",
+    "./luau_packages/.pesde/stefanuk12+luau_defs/0.2.0/luau_defs/docs/luraph.d.json"
   ],
   "selene.configPath": "./.meta/selene.toml",
   "stylua.configPath": "./.meta/.stylua.toml",
