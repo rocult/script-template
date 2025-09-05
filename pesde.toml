@@ -28,6 +28,7 @@ default = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
 # Example dependency below, remove it if you don't need it
+# NOTE: some dependencies will cause an error. this is due to a weird sourcemap, just use a different one.
 promise = { wally = "lukadev-0/typed-promise", version = "^4.0.0" }
 
 [dev_dependencies]
@@ -37,4 +38,4 @@ luau_lsp = { name = "pesde/luau_lsp", version = "^1.42.1", target = "lune" }
 selene = { name = "pesde/selene", version = "^0.28.0", target = "lune" }
 scripts = { name = "pesde/scripts_rojo", version = "^0.1.0", target = "lune" }
 rojo = { name = "pesde/rojo", version = "^7.4.4", target = "lune" }
-luau_defs = { repo = "rocult/luau-defs", rev = "main" }
+luau_defs = { repo = "rocult/luau-defs", rev = "8a7e73fb46324cb93e38e4ca64b7c5f10d4a4d3d" }

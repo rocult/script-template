@@ -62,27 +62,27 @@ greentea = [{ name = "corecii/greentea", version = "^0.4.11", index = "https://g
 luau_check = [{ name = "jiwonz/luau_check", version = "^0.3.8", index = "https://github.com/daimond113/pesde-index" }, "dev"]
 luau_path = [{ name = "jiwonz/luau_path", version = "^0.1.1", index = "https://github.com/daimond113/pesde-index", target = "luau" }, "standard"]
 
-[graph."lukadev_0/option@1.2.0 lune".pkg_ref]
+[graph."lukadev_0/option@1.2.1 lune".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."lukadev_0/result@1.2.0 lune".pkg_ref]
+[graph."lukadev_0/result@1.2.1 lune".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."pesde/luau_lsp@1.48.0 lune"]
+[graph."pesde/luau_lsp@1.53.2 lune"]
 direct = ["luau_lsp", { name = "pesde/luau_lsp", version = "^1.42.1", index = "default", target = "lune" }, "dev"]
 
-[graph."pesde/luau_lsp@1.48.0 lune".dependencies]
+[graph."pesde/luau_lsp@1.53.2 lune".dependencies]
 core = ["pesde/toolchainlib@0.1.15 lune", "standard"]
-option = ["lukadev_0/option@1.2.0 lune", "standard"]
-result = ["lukadev_0/result@1.2.0 lune", "standard"]
+option = ["lukadev_0/option@1.2.1 lune", "standard"]
+result = ["lukadev_0/result@1.2.1 lune", "standard"]
 
-[graph."pesde/luau_lsp@1.48.0 lune".pkg_ref]
+[graph."pesde/luau_lsp@1.53.2 lune".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."pesde/luau_lsp@1.48.0 lune".pkg_ref.dependencies]
+[graph."pesde/luau_lsp@1.53.2 lune".pkg_ref.dependencies]
 core = [{ name = "pesde/toolchainlib", version = "^0.1.15", index = "https://github.com/pesde-pkg/index", target = "lune" }, "standard"]
 option = [{ name = "lukadev_0/option", version = "^1.2.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 result = [{ name = "lukadev_0/result", version = "^1.2.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
@@ -92,8 +92,8 @@ direct = ["rojo", { name = "pesde/rojo", version = "^7.4.4", index = "default", 
 
 [graph."pesde/rojo@7.5.1 lune".dependencies]
 core = ["pesde/toolchainlib@0.1.15 lune", "standard"]
-option = ["lukadev_0/option@1.2.0 lune", "standard"]
-result = ["lukadev_0/result@1.2.0 lune", "standard"]
+option = ["lukadev_0/option@1.2.1 lune", "standard"]
+result = ["lukadev_0/result@1.2.1 lune", "standard"]
 
 [graph."pesde/rojo@7.5.1 lune".pkg_ref]
 ref_ty = "pesde"
@@ -104,29 +104,31 @@ core = [{ name = "pesde/toolchainlib", version = "^0.1.13", index = "https://git
 option = [{ name = "lukadev_0/option", version = "^1.2.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 result = [{ name = "lukadev_0/result", version = "^1.2.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 
-[graph."pesde/scripts_core@0.0.1 lune".pkg_ref]
+[graph."pesde/scripts_core@0.1.0 lune".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."pesde/scripts_core@0.0.1 lune".pkg_ref.dependencies]
+[graph."pesde/scripts_core@0.1.0 lune".pkg_ref.dependencies]
+argon = [{ name = "pesde/argon", version = "^2.0.21", index = "https://github.com/pesde-pkg/index" }, "dev"]
 frktest = [{ name = "itsfrank/frktest", version = "^0.0.2", index = "https://github.com/pesde-pkg/index" }, "dev"]
 luau-lsp = [{ name = "pesde/luau_lsp", version = "^1.36.0", index = "https://github.com/pesde-pkg/index" }, "dev"]
 pathfs = [{ name = "jiwonz/pathfs", version = "^0.1.0", index = "https://github.com/pesde-pkg/index" }, "dev"]
+rojo = [{ name = "pesde/rojo", version = "^7.4.4", index = "https://github.com/pesde-pkg/index" }, "dev"]
 stylua = [{ name = "pesde/stylua", version = "^2.0.1", index = "https://github.com/pesde-pkg/index" }, "dev"]
 
-[graph."pesde/scripts_rojo@0.1.0 lune"]
+[graph."pesde/scripts_rojo@0.1.1 lune"]
 direct = ["scripts", { name = "pesde/scripts_rojo", version = "^0.1.0", index = "default", target = "lune" }, "dev"]
 
-[graph."pesde/scripts_rojo@0.1.0 lune".dependencies]
-core = ["pesde/scripts_core@0.0.1 lune", "standard"]
+[graph."pesde/scripts_rojo@0.1.1 lune".dependencies]
+core = ["pesde/scripts_core@0.1.0 lune", "standard"]
 rojo = ["pesde/rojo@7.5.1 lune", "peer"]
 
-[graph."pesde/scripts_rojo@0.1.0 lune".pkg_ref]
+[graph."pesde/scripts_rojo@0.1.1 lune".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."pesde/scripts_rojo@0.1.0 lune".pkg_ref.dependencies]
-core = [{ name = "pesde/scripts_core", version = "^0.0.1", index = "https://github.com/pesde-pkg/index", target = "lune" }, "standard"]
+[graph."pesde/scripts_rojo@0.1.1 lune".pkg_ref.dependencies]
+core = [{ name = "pesde/scripts_core", version = "^0.1.0", index = "https://github.com/pesde-pkg/index", target = "lune" }, "standard"]
 rojo = [{ name = "pesde/rojo", version = "^7.4.4", index = "https://github.com/pesde-pkg/index" }, "peer"]
 
 [graph."pesde/selene@0.28.0 lune"]
@@ -134,8 +136,8 @@ direct = ["selene", { name = "pesde/selene", version = "^0.28.0", index = "defau
 
 [graph."pesde/selene@0.28.0 lune".dependencies]
 core = ["pesde/toolchainlib@0.1.15 lune", "standard"]
-option = ["lukadev_0/option@1.2.0 lune", "standard"]
-result = ["lukadev_0/result@1.2.0 lune", "standard"]
+option = ["lukadev_0/option@1.2.1 lune", "standard"]
+result = ["lukadev_0/result@1.2.1 lune", "standard"]
 
 [graph."pesde/selene@0.28.0 lune".pkg_ref]
 ref_ty = "pesde"
@@ -151,8 +153,8 @@ direct = ["stylua", { name = "pesde/stylua", version = "^2.0.2", index = "defaul
 
 [graph."pesde/stylua@2.1.0 lune".dependencies]
 core = ["pesde/toolchainlib@0.1.15 lune", "standard"]
-option = ["lukadev_0/option@1.2.0 lune", "standard"]
-result = ["lukadev_0/result@1.2.0 lune", "standard"]
+option = ["lukadev_0/option@1.2.1 lune", "standard"]
+result = ["lukadev_0/result@1.2.1 lune", "standard"]
 
 [graph."pesde/stylua@2.1.0 lune".pkg_ref]
 ref_ty = "pesde"
@@ -165,9 +167,9 @@ result = [{ name = "lukadev_0/result", version = "^1.2.0", index = "https://gith
 
 [graph."pesde/toolchainlib@0.1.15 lune".dependencies]
 dirs = ["jiwonz/dirs@0.3.0 lune", "standard"]
-option = ["lukadev_0/option@1.2.0 lune", "peer"]
+option = ["lukadev_0/option@1.2.1 lune", "peer"]
 pathfs = ["jiwonz/pathfs@0.3.2 lune", "standard"]
-result = ["lukadev_0/result@1.2.0 lune", "peer"]
+result = ["lukadev_0/result@1.2.1 lune", "peer"]
 unzip = ["0x5eal/unzip@0.1.3 luau", "standard"]
 
 [graph."pesde/toolchainlib@0.1.15 lune".pkg_ref]
@@ -186,8 +188,8 @@ direct = ["darklua", { repo = "https://github.com/Stefanuk12/darklua", rev = "3a
 
 [graph."stefanuk12/darklua@0.16.2 lune".dependencies]
 core = ["pesde/toolchainlib@0.1.15 lune", "standard"]
-option = ["lukadev_0/option@1.2.0 lune", "standard"]
-result = ["lukadev_0/result@1.2.0 lune", "standard"]
+option = ["lukadev_0/option@1.2.1 lune", "standard"]
+result = ["lukadev_0/result@1.2.1 lune", "standard"]
 
 [graph."stefanuk12/darklua@0.16.2 lune".pkg_ref]
 ref_ty = "git"
@@ -200,13 +202,13 @@ core = [{ name = "pesde/toolchainlib", version = "^0.1.12", index = "https://git
 option = [{ name = "lukadev_0/option", version = "^1.2.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 result = [{ name = "lukadev_0/result", version = "^1.2.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 
-[graph."stefanuk12/luau_defs@0.1.0 luau"]
-direct = ["luau_defs", { repo = "https://github.com/rocult/luau-defs", rev = "main" }, "dev"]
+[graph."stefanuk12/luau_defs@0.2.1 luau"]
+direct = ["luau_defs", { repo = "https://github.com/rocult/luau-defs", rev = "8a7e73fb46324cb93e38e4ca64b7c5f10d4a4d3d" }, "dev"]
 
-[graph."stefanuk12/luau_defs@0.1.0 luau".pkg_ref]
+[graph."stefanuk12/luau_defs@0.2.1 luau".pkg_ref]
 ref_ty = "git"
 repo = "https://github.com/rocult/luau-defs"
-tree_id = "6526168c56ec749539a52279d8bbe6c63134c93d"
+tree_id = "165c38b30770a3a2d078055a26c6a7078511ca62"
 new_structure = true
 
 [graph."wally#evaera/promise@4.0.0 roblox".pkg_ref]
