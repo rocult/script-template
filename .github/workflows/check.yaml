@@ -1,7 +1,7 @@
 name: Check
 
 on:
-  workflow_call:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -18,14 +18,13 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install Pesde
-        uses: lumin-org/setup-pesde@v0.4.1
+        uses: lumin-org/setup-pesde@b690699ace34169731b6b2a1c93b2008472038a7
         with:
           cache: true
 
       - name: Install dependencies
         run: |
           pesde install
-          pesde run config
 
       - name: StyLua
         run: |

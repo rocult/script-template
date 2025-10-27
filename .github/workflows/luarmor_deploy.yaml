@@ -1,4 +1,5 @@
 # Please read this -> https://github.com/Stefanuk12/luarmor-deploy-action/tree/main
+# NOTE: this currently does not work due to a captcha solver needed
 
 name: Deploy Script to Luarmor
 
