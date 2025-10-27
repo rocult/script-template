@@ -6,15 +6,15 @@ license = "MIT"
 includes = ["pesde.toml", "README.md", "LICENSE", "src/*"]
 
 [engines]
-# pesde = "^0.6.2"
-lune = "=0.8.9"
+pesde = "^0.7.1"
+lune = "=0.10.4"
 
 [target]
 build_files = ["src"]
 environment = "roblox"
 # Remove bin AND lib, if you are not publishing to the registry
-bin = "src/main.luau"  # Remove this, if this is not a binary
-lib = "src/init.luau"  # Remove this, if this is not a library
+bin = "src/main.luau" # Remove this, if this is not a binary
+lib = "src/init.luau" # Remove this, if this is not a library
 
 [scripts]
 roblox_sync_config_generator = ".pesde/scripts/roblox_sync_config_generator.luau"
@@ -28,14 +28,14 @@ default = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
 # Example dependency below, remove it if you don't need it
-# NOTE: some dependencies will cause an error. this is due to a weird sourcemap, just use a different one.
-promise = { wally = "lukadev-0/typed-promise", version = "^4.0.0" }
+promise = { wally = "evaera/promise", version = "^4.0.0" }
 
 [dev_dependencies]
-darklua = { repo = "Stefanuk12/darklua", rev = "3af4b5a642ddda5141cfb086021626c97f82047d", target = "lune" }
-stylua = { name = "pesde/stylua", version = "^2.0.2", target = "lune" }
-luau_lsp = { name = "pesde/luau_lsp", version = "^1.42.1", target = "lune" }
-selene = { name = "pesde/selene", version = "^0.28.0", target = "lune" }
-scripts = { name = "pesde/scripts_rojo", version = "^0.1.0", target = "lune" }
+darklua = { repo = "Stefanuk12/darklua", rev = "a1ac53a49d4c2e44e9bf28e95185e3f14c9892c4", target = "lune" }
+luau_defs = { repo = "rocult/luau-defs", rev = "8a7e73fb46324cb93e38e4ca64b7c5f10d4a4d3d", target = "luau" }
+
+luau_lsp = { name = "pesde/luau_lsp", version = "^1.55.0", target = "lune" }
 rojo = { name = "pesde/rojo", version = "^7.4.4", target = "lune" }
-luau_defs = { repo = "rocult/luau-defs", rev = "8a7e73fb46324cb93e38e4ca64b7c5f10d4a4d3d" }
+scripts = { name = "pesde/scripts_rojo", version = "^0.2.0", target = "lune" }
+selene = { name = "pesde/selene", version = "^0.29.0", target = "lune" }
+stylua = { name = "pesde/stylua", version = "^2.0.2", target = "lune" }
