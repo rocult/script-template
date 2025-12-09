@@ -32,7 +32,7 @@ promise = { wally = "evaera/promise", version = "^4.0.0" }
 
 [dev_dependencies]
 darklua = { repo = "Stefanuk12/darklua", rev = "a1ac53a49d4c2e44e9bf28e95185e3f14c9892c4", target = "lune" }
-luau_defs = { repo = "rocult/luau-defs", rev = "cd5fe1217f180a5b5760104c0a5c308aa2c5d58d", target = "luau" }
+luau_defs = { repo = "rocult/luau-defs", rev = "e628aec6fabb5acfd28f1bc6a18a1c7950122d2c", target = "luau" }
 
 luau_lsp = { name = "pesde/luau_lsp", version = "^1.55.0", target = "lune" }
 rojo = { name = "pesde/rojo", version = "^7.4.4", target = "lune" }

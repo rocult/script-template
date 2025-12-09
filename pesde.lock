@@ -199,13 +199,13 @@ option = [{ name = "lukadev_0/option", version = "^1.2.1", index = "https://gith
 result = [{ name = "lukadev_0/result", version = "^1.2.1", index = "https://github.com/pesde-pkg/index" }, "standard"]
 toolchainlib = [{ name = "pesde/toolchainlib", version = "^0.2.0", index = "https://github.com/pesde-pkg/index" }, "standard"]
 
-[graph."stefanuk12/luau_defs@0.2.3 luau"]
-direct = ["luau_defs", { repo = "https://github.com/rocult/luau-defs", rev = "cd5fe1217f180a5b5760104c0a5c308aa2c5d58d" }, "dev"]
+[graph."stefanuk12/luau_defs@0.2.4 luau"]
+direct = ["luau_defs", { repo = "https://github.com/rocult/luau-defs", rev = "e628aec6fabb5acfd28f1bc6a18a1c7950122d2c" }, "dev"]
 
-[graph."stefanuk12/luau_defs@0.2.3 luau".pkg_ref]
+[graph."stefanuk12/luau_defs@0.2.4 luau".pkg_ref]
 ref_ty = "git"
 repo = "https://github.com/rocult/luau-defs"
-tree_id = "e0c5d1b30aa841951cb0d8ad5a332268083dad9e"
+tree_id = "b6c9a4f4713febab292be90d4938cf6d83caf394"
 new_structure = true
 
 [graph."wally#evaera/promise@4.0.0 roblox"]
