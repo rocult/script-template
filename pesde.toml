@@ -31,7 +31,7 @@ default = "https://github.com/UpliftGames/wally-index"
 promise = { wally = "evaera/promise", version = "^4.0.0" }
 
 [dev_dependencies]
-darklua = { repo = "Stefanuk12/darklua", rev = "a1ac53a49d4c2e44e9bf28e95185e3f14c9892c4", target = "lune" }
+darklua = { repo = "Stefanuk12/darklua", rev = "57e85a0c92db3d0df067ba037ac67ce453b85a66", target = "lune" }
 luau_defs = { repo = "rocult/luau-defs", rev = "e628aec6fabb5acfd28f1bc6a18a1c7950122d2c", target = "luau" }
 
 luau_lsp = { name = "pesde/luau_lsp", version = "^1.55.0", target = "lune" }
