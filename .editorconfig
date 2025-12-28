@@ -1,0 +1,17 @@
+root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+
+[*.{lua,luau}]
+indent_style = space
+indent_size = 4
+
+[*.{json, toml}]
+indent_style = space
+indent_size = 2
+
+[.luaurc]
+indent_style = space
+indent_size = 2
