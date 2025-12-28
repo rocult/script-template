@@ -16,4 +16,4 @@ Please read the documentation on how to best use this template and installation.
 1. Make sure you install [pesde](https://docs.pesde.dev/installation/) **exactly** how the [documentation describes here](https://docs.pesde.dev/installation/)
 2. Run `pesde install` while `cd` in this (root) directory
    1. \[Optional\] Reload Luau Language Server (`CTRL + P` and search for it)
-3. Run [build.bat](./scripts/build.bat), **from the root**
+3. Run [build.ps1](./scripts/build.ps1), **from the root**
