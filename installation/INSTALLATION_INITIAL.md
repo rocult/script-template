@@ -8,7 +8,7 @@ Installation is super easy!
 2. Run `pesde install` to install all of the dependencies
 
 > [!WARNING]
-> DO NOT use any other toolchain managers like rokit or aftman to install pesde. For reaosns why, please read their documentation.
+> DO NOT use any other toolchain managers like rokit or aftman to install pesde. For reasons why, please read their documentation.
 
 From here, we have package dependencies which are like libraries we can use in our script.
 This is faciliated by [wally](https://github.com/UpliftGames/wally) which pesde can use.
