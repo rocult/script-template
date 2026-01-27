@@ -1,5 +1,5 @@
 # Please read this -> https://github.com/Stefanuk12/luarmor-deploy-action/tree/main
-# NOTE: this currently does not work due to a captcha solver needed
+# NOTE: this only works if you use 2captcha solver
 
 name: Deploy Script to Luarmor
 
@@ -12,17 +12,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Install Pesde
-        uses: lumin-org/setup-pesde@v0.3.1
+        uses: lumin-org/setup-pesde@v0.4.1
         with:
           cache: true
 
       - name: Install dependencies
-        run: |
-          pesde install
-          pesde run config
+        run: pesde install
 
       - name: Darklua
         run: |
@@ -31,7 +29,7 @@ jobs:
           "$darklua" process src/init.luau dist.lua -c .meta/.darklua.json
 
       - name: Upload dist.lua artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v6
         with:
           name: dist
           path: dist.lua
@@ -43,7 +41,7 @@ jobs:
 
     steps:
       - name: Download dist.lua artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v7
         with:
           name: dist
           path: ./
@@ -53,5 +51,13 @@ jobs:
         with:
           twocaptcha-api-key: ${{ secrets.TWOCAPTCHA_API_KEY }}
           api-key: ${{ secrets.LUARMOR_API_KEY }}
-          script-id: "your-script-id"
+          script-id: "26bf4fbf77075cc4dc118a1432bdef95" # Rocult Paid
+          file: "dist.lua"
+
+      - name: Deploy to Luarmor
+        uses: stefanuk12/luarmor-deploy-action@v2.0.0
+        with:
+          twocaptcha-api-key: ${{ secrets.TWOCAPTCHA_API_KEY }}
+          api-key: ${{ secrets.LUARMOR_API_KEY }}
+          script-id: "b51589a899a693b4da98f86bbfb79c23" # Rocult Free
           file: "dist.lua"
