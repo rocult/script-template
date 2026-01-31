@@ -2,7 +2,11 @@
   "bundle": {
     "excludes": [],
     "modules_identifier": "__DARKLUA_BUNDLE_MODULES",
-    "require_mode": "hybrid"
+    "require_mode": [
+      {"name": "roblox"},
+      {"name": "luau"},
+      {"name": "path"}
+    ] 
   },
   "generator": "readable",
   "rules": [
