@@ -67,19 +67,19 @@ index_url = "https://github.com/pesde-pkg/index"
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."pesde/luau_lsp@1.58.0 lune"]
-direct = ["luau_lsp", { name = "pesde/luau_lsp", version = "^1.58.0", index = "default", target = "lune" }, "dev"]
+[graph."pesde/luau_lsp@1.61.0 lune"]
+direct = ["luau_lsp", { name = "pesde/luau_lsp", version = "^1.61.0", index = "default", target = "lune" }, "dev"]
 
-[graph."pesde/luau_lsp@1.58.0 lune".dependencies]
+[graph."pesde/luau_lsp@1.61.0 lune".dependencies]
 option = ["lukadev_0/option@1.2.1 lune", "standard"]
 result = ["lukadev_0/result@1.2.1 lune", "standard"]
 toolchainlib = ["pesde/toolchainlib@0.2.2 lune", "standard"]
 
-[graph."pesde/luau_lsp@1.58.0 lune".pkg_ref]
+[graph."pesde/luau_lsp@1.61.0 lune".pkg_ref]
 ref_ty = "pesde"
 index_url = "https://github.com/pesde-pkg/index"
 
-[graph."pesde/luau_lsp@1.58.0 lune".pkg_ref.dependencies]
+[graph."pesde/luau_lsp@1.61.0 lune".pkg_ref.dependencies]
 option = [{ name = "lukadev_0/option", version = "^1.2.1", index = "https://github.com/pesde-pkg/index" }, "standard"]
 result = [{ name = "lukadev_0/result", version = "^1.2.1", index = "https://github.com/pesde-pkg/index" }, "standard"]
 toolchainlib = [{ name = "pesde/toolchainlib", version = "^0.2.2", index = "https://github.com/pesde-pkg/index", target = "lune" }, "standard"]
