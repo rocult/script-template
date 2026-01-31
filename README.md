@@ -7,7 +7,7 @@ This is an opinionated project layout, how I think you should layout your projec
 Please read the documentation on how to best use this template and installation. You can find it on the [docs branch here](https://github.com/rocult/script-template/tree/docs).
 
 > [!WARNING]
-> Ensure that [`.meta/sourcemap.json`](./.meta/sourcemap.json) is saved as `UTF-8`.
+> For `selene`, you must either move `.meta/selene.toml` to the root folder or install my fork of the extension [from here](https://github.com/Stefanuk12/selene/tree/vsc-config-file). Note that you need to build it yourself.
 
 ## Building and Usage
 
