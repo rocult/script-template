@@ -1,0 +1,27 @@
+name: Bundle
+description: Cache darklua, install it via mise, and build the script
+
+inputs:
+  target:
+    description: Build target passed to `mise build`
+    required: false
+    default: main
+
+runs:
+  using: composite
+  steps:
+    - name: Cache darklua
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.cargo/bin/darklua
+          ~/.cargo/.darklua-installed-rev
+        key: darklua-${{ runner.os }}-${{ hashFiles('mise.toml') }}
+
+    - name: Install darklua
+      shell: bash
+      run: mise install-darklua
+
+    - name: Build
+      shell: bash
+      run: mise build ${{ inputs.target }}

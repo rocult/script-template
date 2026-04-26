@@ -1,0 +1,75 @@
+[settings]
+experimental = true
+all_compile = false
+
+[vars]
+stylua_args = "-f .meta/stylua.toml -g '**/*.lua' -g '**/*.luau' -g '!**/*.d.luau'"
+
+[tools]
+"cargo:lune" = "0.9.4"
+"cargo:rojo" = "7.6.1"
+"cargo:selene" = "0.29.0"
+"cargo:stylua" = { version = "2.4.1", features = "luau" }
+"github:JohnnyMorganz/luau-lsp" = "1.61.0"
+
+[hooks]
+postinstall = "lune run .meta/scripts/postinstall"
+
+[tasks.install-darklua]
+description = "Build and install the custom darklua fork (idempotent)"
+run = "lune run .meta/scripts/install-darklua"
+
+[tasks.deps]
+description = "Install pesde dependencies"
+run = "pesde install"
+sources = ["pesde.toml", "pesde.lock"]
+outputs = ["roblox_packages/**", "luau_packages/**", "lune_packages/**"]
+
+[tasks.lint]
+description = "Lint the source via selene"
+run = "selene --config .meta/selene.toml src/"
+
+[tasks.fmt]
+description = "Format the source via stylua"
+run = "stylua {{ vars.stylua_args }} -- ."
+
+[tasks.fmt-check]
+description = "Check formatting of the source via stylua"
+run = "stylua {{ vars.stylua_args }} --check -- ."
+
+[tasks.fetch-types]
+description = "Download Roblox type definitions"
+run = "curl -fsSL https://raw.githubusercontent.com/JohnnyMorganz/luau-lsp/main/scripts/globalTypes.d.lua -o ./roblox.d.luau"
+
+[tasks.sourcemap]
+description = "Generate sourcemap via rojo"
+depends = ["deps"]
+run = "rojo sourcemap default.project.json --output .meta/sourcemap.json"
+sources = ["default.project.json", "src/**/*.luau"]
+outputs = [".meta/sourcemap.json"]
+
+[tasks.check]
+description = "Check the source via luau-lsp"
+depends = ["deps", "fetch-types"]
+run = "luau-lsp analyze --settings .vscode/settings.json --definitions \"@roblox=./roblox.d.luau\" --ignore /roblox_packages/** src"
+
+[tasks.build]
+description = "Build the script via darklua (no args = build main)"
+depends = ["deps"]
+run = "lune run .meta/scripts/build"
+
+[tasks.clean]
+description = "Remove build artifacts and downloaded packages"
+run = "lune run .meta/scripts/clean"
+
+[tasks.init]
+description = "Initialise the project with all relevant information"
+run = "lune run .meta/scripts/init"
+
+[tasks.ci]
+description = "Run the entire CI pipeline"
+depends = ["sourcemap", "lint", "fmt-check", "check", "build main"]
+
+[tasks.cd]
+description = "Run the entire CD pipeline"
+depends = ["sourcemap", "build main"]

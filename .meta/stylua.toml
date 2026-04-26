@@ -1,3 +1,4 @@
+syntax = "Luau"
 call_parentheses = "Always"
 collapse_simple_statement = "Never"
 column_width = 120
@@ -7,4 +8,4 @@ line_endings = "Unix"
 quote_style = "AutoPreferDouble"
 
 [sort_requires]
-enabled = false
+enabled = true

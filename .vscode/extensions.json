@@ -5,6 +5,9 @@
     "johnnymorganz.stylua",
     "kampfkarren.selene-vscode",
     "tamasfe.even-better-toml",
-    "redhat.vscode-yaml"
+    "redhat.vscode-yaml",
+    "fill-labs.dependi",
+    "mkhl.direnv",
+    "hverlin.mise-vscode"
   ]
 }

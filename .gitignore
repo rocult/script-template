@@ -1,7 +1,7 @@
 .pesde
 /*_packages
 /Packages
-
-dist.lua
+/dist
+/.direnv
 roblox.d.luau
 .meta/sourcemap.json

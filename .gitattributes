@@ -1,1 +1,13 @@
 * text=auto eol=lf
+
+*.luau   text
+*.lua    text
+*.toml   text
+*.json   text
+*.yaml   text
+*.yml    text
+*.md     text
+*.lock   text -diff
+
+# Linguist hints
+*.luau linguist-language=Luau

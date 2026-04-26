@@ -1,0 +1,16 @@
+name: Setup
+description: Install Pesde and mise with caching enabled
+
+runs:
+  using: composite
+  steps:
+    - name: Install Pesde
+      uses: lumin-org/setup-pesde@b690699ace34169731b6b2a1c93b2008472038a7
+      with:
+        cache: true
+
+    - name: Setup mise
+      uses: jdx/mise-action@v2
+      with:
+        cache: true
+        experimental: true

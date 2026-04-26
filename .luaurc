@@ -1,5 +1,6 @@
 {
   "aliases": {
+    "lune": "~/.lune/.typedefs/0.9.4/",
     "pkgs": "./roblox_packages",
     "core": "./src/core",
     "modules": "./src/modules",

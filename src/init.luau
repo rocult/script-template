@@ -1,5 +1,5 @@
-local LocalPlayer = require("@core/player")
 local Gun = require("@modules/gun")
+local LocalPlayer = require("@core/player")
 local Promise = require("@pkgs/promise")
 
 print(LocalPlayer)
